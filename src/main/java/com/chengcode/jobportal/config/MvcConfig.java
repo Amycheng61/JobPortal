@@ -1,5 +1,6 @@
 package com.chengcode.jobportal.config;
 
+import org.antlr.v4.runtime.misc.Interval;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -9,7 +10,7 @@ import java.nio.file.Paths;
 
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
-    private static final String UPLOAD_DIR="photo";
+    private static final String UPLOAD_DIR="photos";
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

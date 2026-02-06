@@ -22,7 +22,7 @@ public class JobPostActivity {
     @JoinColumn(name = "jobCompanyId",referencedColumnName = "Id")
     private JobCompany jobCompanyId;
     @Transient
-    private Boolean isActivite;
+    private Boolean isActive;
     @Transient
     private Boolean isSaved;
     @Length(max=1000)
@@ -42,7 +42,7 @@ public class JobPostActivity {
         this.postedById = postedById;
         this.jobLocationId = jobLocationId;
         this.jobCompanyId = jobCompanyId;
-        this.isActivite = isActivite;
+        this.isActive = isActivite;
         this.isSaved = isSaved;
         this.descriptionOfJob = descriptionOfJob;
         this.jobType = jobType;
@@ -76,19 +76,19 @@ public class JobPostActivity {
         this.jobLocationId = jobLocationId;
     }
 
-    public Boolean getActivite() {
-        return isActivite;
+    public Boolean getIsActive() {
+        return isActive;
     }
 
-    public void setActivite(Boolean activite) {
-        isActivite = activite;
+    public void setIsActive(Boolean activite) {
+        isActive = activite;
     }
 
-    public Boolean getSaved() {
+    public Boolean getIsSaved() {
         return isSaved;
     }
 
-    public void setSaved(Boolean saved) {
+    public void setIsSaved(Boolean saved) {
         isSaved = saved;
     }
 
@@ -155,7 +155,7 @@ public class JobPostActivity {
                 ", postedById=" + postedById +
                 ", jobLocationId=" + jobLocationId +
                 ", jobCompanyId=" + jobCompanyId +
-                ", isActivite=" + isActivite +
+                ", isActivite=" + isActive +
                 ", isSaved=" + isSaved +
                 ", descriptionOfJob='" + descriptionOfJob + '\'' +
                 ", jobType='" + jobType + '\'' +
